@@ -6,7 +6,6 @@
 <img v-bind:src="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/' + p.id + '.png'">
 <br>
 {{ p.name }}
-{{ evolution }}
 </router-link>
 </h1>
         </div>
@@ -35,7 +34,10 @@ img {
 }
 
 .pokemon {
-padding : 2vw;
+margin: 2vw;
+    padding: 2vw;
+    background-color: aliceblue;
+    border-radius: 10%;
 }
 
 </style>

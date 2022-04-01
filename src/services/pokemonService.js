@@ -18,7 +18,6 @@ getPokemon(id){
             pokemon.sprites = pokemondata.sprites.other['official-artwork'].front_default
             pokemon.name = pokemondata.name
             pokemon.id = pokemondata.id
-            pokemon.abilities = pokemondata.moves
             pokemon.types = pokemondata.types
             pokemon.hp = pokemondata.stats[0].base_stat
             pokemon.defense = pokemondata.stats[1].base_stat

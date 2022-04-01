@@ -1,5 +1,6 @@
 <template>
 <div>
+    <div class="head">
     <div class="tittle">
     <h1>
       {{ pokemon.name }} n°{{ pokemonId }}
@@ -11,12 +12,12 @@
     <div class="haut-page">
     <div class="physique">
         <div class="physique-detail">
-            <h3 class="txt-physique" id="titre-physique"> Taille </h3>
+            <h3 class="txt-physique" id="titre-physique"> { Taille </h3>
             <p>{{pokemon.height*10}} cm </p> 
             
         </div>
             <div class="physique-detail">
-                 <h3 class="txt-physique"> Poids </h3>
+                 <h3 class="txt-physique"> { Poids </h3>
             <p >{{pokemon.weight/10}} kg </p> 
             </div>
           </div>
@@ -27,31 +28,33 @@
     </div>
              <div class="info">
                 <div class="detail">
-                  <h3>HP</h3>
-                  {{pokemon.hp}}
+                  <h3>/      HP      /</h3>
+                  <p class="stats">{{pokemon.hp}}<p/>
                 </div>
             <div class="detail"> 
-                <h3>Attaque </h3>
-               {{pokemon.attack}}
+                <h3>/ Attaque /</h3>
+               <p class="stats">{{pokemon.attack}}<p/>
             </div>
             <div class="detail"> 
-               <h3>Defense</h3>
-                {{pokemon.defense}}
+               <h3>/ Defense /</h3>
+                <p class="stats">{{pokemon.defense}}<p/>
             </div>
             <div class="detail"> 
-                <h3>Attaque spéciale</h3>
-                {{pokemon.special_attack}}
+                <h3>/ Attaque spéciale /</h3>
+                <p class="stats">{{pokemon.special_attack}}<p/>
             </div>
             <div class="detail"> 
-                <h3>Défense spéciale</h3>
-                {{pokemon.special_defense}}
+                <h3>/ Défense spéciale /</h3>
+                <p class="stats">{{pokemon.special_defense}}<p/>
             </div>
             <div class="detail"> 
-                <h3>Vitesse</h3>
-                {{pokemon.speed}}
+                <h3>/ Vitesse /</h3>
+                <p class="stats">{{pokemon.speed}}<p/>
             </div>
         </div>
-        
+    </div>
+    <div class="corps">
+    </div>
 </div>
 </template>
 <style scoped>
@@ -101,7 +104,7 @@ width: 11vw;
     flex-direction: column;
     margin-left: 14em;
     width: fit-content;
-    background-color: #e7e7e7;
+    background-color: aliceblue;
     border-radius: 10%;
 }
 
@@ -122,6 +125,12 @@ width: 11vw;
 .haut-page {
     display: flex;
     justify-content: space-evenly;
+}
+
+.stats {
+    background-color: aliceblue;
+    border-radius: 15vw;
+    padding: 1vw 0;
 }
 
 </style>
