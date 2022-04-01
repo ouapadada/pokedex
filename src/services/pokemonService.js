@@ -47,7 +47,6 @@ getPokemons(){
                 let substrings = p.url.split("/")
                 let id = substrings[substrings.length - 2];
                 p.id = id;
-                pokemons.push(p)
             })
             resolve(pokemons)
         })
